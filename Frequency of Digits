@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+#define len 10
+int main() {
+    char* str=malloc(1024*sizeof(char));
+    scanf("%s",str);
+    int c;
+    int n=strlen(str);
+    int A[10];
+    for(int j=0;j<10;j++)
+    {
+        c=0;
+        for(int i=0;i<n;i++)
+        {
+            if(j+48==str[i])
+            {
+                c++;
+            }
+        }
+        A[j]=c;
+    }
+    for(int i=0;i<10;i++)
+    {
+        printf("%d ",A[i]);
+    }
+    return 0;
+}
